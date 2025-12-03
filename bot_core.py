@@ -21,8 +21,8 @@ class Bot(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
 
         # Chargement des variables d'environnement
-        load_dotenv(dotenv_path="config")
-        self.token : int = os.getenv("TOKEN")
+        load_dotenv(dotenv_path=".env")
+        self.token : int = os.getenv("DISCORD_TOKEN")
 
 
         # Création d'un environnement et d'un serveur
